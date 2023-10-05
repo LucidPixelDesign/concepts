@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peterson Academy - Homepage Concept</title>
+    <style>
+        .header{
+            height: 100px;
+            width: 100%;
+            border-bottom: 1px solid grey;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .logo{
+            background-image: url("https://petersonacademy.com/wp-content/uploads/2022/04/PA-SVG-Logo.svg");
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .headerright{
+            display: inline-block;
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+
+        }
+        footer{
+            background-color: white;
+        }
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .slider-container {
+            width: 100%;
+            height: 170px;
+            position: relative;
+            white-space: nowrap;
+        }
+        .slider-image {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            width: 25%;
+            height: 150px;
+            background-color: #3498db;
+            display: inline-block;
+            position: absolute;
+            margin: 20px;
+            animation: slide 20s linear infinite;
+            border-radius: 10px;
+            background-size: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                left:-30%;
+            }
+            100% {
+                left:130%;
+            }
+        }
+        .slider-image:nth-child(1) {
+          animation-delay: -20s; /* No delay for the first child */
+        }
+
+        .slider-image:nth-child(2) {
+          animation-delay: -16s; /* Delay the second child by 0.2 seconds */
+        }
+
+        .slider-image:nth-child(3) {
+          animation-delay: -12s; /* Delay the third child by 0.4 seconds */
+        }
+        .slider-image:nth-child(4) {
+          animation-delay: -8s; /* No delay for the first child */
+        }
+
+        .slider-image:nth-child(5) {
+          animation-delay: -4s; /* Delay the second child by 0.2 seconds */
+        }
+
+        .slider-image:nth-child(6) {
+          animation-delay: 0s; /* Delay the third child by 0.4 seconds */
+        }
+
+
+
+        .slider-image2 {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            width: 25%;
+            height: 150px;
+            background-color: #3498db;
+            display: inline-block;
+            position: absolute;
+            margin: 20px;
+            animation: slide2 20s linear infinite;
+            border-radius: 10px;
+            transition-duration: 0.2s;
+            background-size: cover;
+            }
+
+        @keyframes slide2 {
+            0% {
+                left:130%;
+            }
+            100% {
+                left:-30%;
+            }
+        }
+        .slider-image2:nth-child(1) {
+          animation-delay: -20s; /* No delay for the first child */
+        }
+
+        .slider-image2:nth-child(2) {
+          animation-delay: -16s; /* Delay the second child by 0.2 seconds */
+        }
+
+        .slider-image2:nth-child(3) {
+          animation-delay: -12s; /* Delay the third child by 0.4 seconds */
+        }
+        .slider-image2:nth-child(4) {
+          animation-delay: -8s; /* No delay for the first child */
+        }
+
+        .slider-image2:nth-child(5) {
+          animation-delay: -4s; /* Delay the second child by 0.2 seconds */
+        }
+
+        .slider-image2:nth-child(6) {
+          animation-delay: 0s; /* Delay the third child by 0.4 seconds */
+        }
+        .background{
+            background-image: url("https://cutewallpaper.org/28/computer-wallpaper-moon/101313764.jpg");
+   background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Optional */
+  background-attachment: fixed;
+        }
+
+        .title{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            font-family: "Libre Baskerville", sans-serif;
+            margin: 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        .title2{
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Libre Baskerville", sans-serif;
+            margin: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        .body{
+            color: grey;
+            text-align: center;
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+            width: 400px;
+            align-self: center;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .launch{
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-family: "Libre Baskerville", sans-serif;
+            margin: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        .signUpContainer{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+        .signUpText{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            height:50px;
+            width: 600px;
+            resize: none;
+            display: inline-block;
+            line-height: 50px;
+            font-size: 18spx;
+            font-family: "Roboto", sans-serif;
+            padding-left: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            outline: none;
+            min-width: 280px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .signUpText:focus{
+            box-shadow: 0px 7.5px 20px rgba(0, 0, 0, 0.3);
+            outline: none;
+        }
+        .signUpButton{
+            margin: 10px;
+            height:50px;
+             width: 200px;
+             background-color: blue;
+            display: inline-block;
+             line-height: 50px;
+            font-size: 30px;
+            font-family: "Roboto", sans-serif;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition-duration: 0.2s;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            min-width: 115px;
+        }
+        .signUpButton:hover{
+            background-color: rgb(30, 104, 252);
+            box-shadow: 0px 7.5px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        /* Container for columns */
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Column styles */
+        .footer-column {
+            flex-basis: calc(30%); /* Adjust column width for mobile */
+            margin-right: 20px;
+        }
+        .xLogo{
+            background-image: url("https://seeklogo.com/images/T/twitter-x-logo-577BCAE525-seeklogo.com.png?v=638264860160000000");
+            height: 40px;
+            width: 40px;
+            background-size: cover;
+            display: inline-block;
+            margin: 10px;
+        }
+        .instagramLogo{
+            background-image: url("https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png");
+            height: 40px;
+            width: 40px;
+            background-size: contain;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap">
+</head>
+<body>
+
+    <div class="background">
+    <div class="header">
+        <a href="#" class="logo"></a>
+        <div class="headerright">
+            <a href="https://www.instagram.com/petersonacademy/?hl=en" class="instagramLogo"></a>
+            <a href="https://twitter.com/petersonacademy" class="xLogo"></a>
+        </div>
+    </div>
+        <div class="slider-container">
+            <div class="slider-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/01/07/15/07/bible-1960635_1280.jpg');"></div>
+            <div class="slider-image" style="background-image: url('https://cdn.pixabay.com/photo/2013/07/19/00/18/splashing-165192_1280.jpg');"></div>
+            <div class="slider-image" style="background-image: url('https://cdn.pixabay.com/photo/2018/05/07/19/07/cubes-3381438_1280.jpg');"></div>
+            <div class="slider-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/10/01/15/15/diving-1707742_1280.jpg');"></div>
+            <div class="slider-image" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/12/32/hell-735995_1280.jpg');"></div>
+        </div>
+            <div class="slider-container">
+            <div class="slider-image2" style="background-image: url('https://cdn.pixabay.com/photo/2018/01/19/11/13/abstract-3092201_1280.jpg');"></div>
+            <div class="slider-image2" style="background-image: url('https://cdn.pixabay.com/photo/2016/09/29/13/08/planet-1702788_1280.jpg');"></div>
+            <div class="slider-image2" style="background-image: url('https://cdn.pixabay.com/photo/2021/04/29/19/56/woman-6217377_1280.jpg');"></div>
+            <div class="slider-image2" style="background-image: url('https://cdn.pixabay.com/photo/2014/01/05/01/19/dragon-238931_1280.jpg');"></div>
+            <div class="slider-image2" style="background-image: url('https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_1280.jpg');"></div>
+        </div>
+        <div class="title">Peterson Academy</div>
+        <div class="title2">Learn from the world’s best: How to think, not what to think</div>
+        <div class="body">Online university. Virtual classrooms, community, and testing.</div>
+        <div class="launch">Launching November 2023</div>
+        <div class="signUpContainer">
+            <textarea placeholder="Sign Up To Be Notified Of The Launch" class="signUpText"></textarea>
+            <button class="signUpButton">Sign Up</button>
+        </div>
+
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div>For business inquiries, email:</div>
+                <a href="mailto:business@petersonacademy.com">business@petersonacademy.com</a>
+                <div>Interested in lecturing?</div>
+                <a href="https://petersonacademy.com/instructor-application">Apply Here</a>
+            </div>
+            <div class="footer-column">
+                <a href="https://www.instagram.com/petersonacademy/?hl=en" class="instagramLogo"></a>
+                <a href="https://twitter.com/petersonacademy" class="xLogo"></a>
+            </div>
+            <div class="footer-column">
+                <div>(Copyright Goes Here)</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
